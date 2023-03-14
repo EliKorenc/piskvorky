@@ -16,11 +16,14 @@ body {
 
 .uvod {
   background-color: #283e50;
+  padding: 10px;
 }
 
 img {
   width: 100%;
   height: auto;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 h1 {
