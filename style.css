@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: #ffffff;
+  text-align: center;
+  background-image: linear-gradient(#615dad, #ffc8da);
+  margin: 30vw;
+  margin-top: 10vh;
+
+}
+
+.uvod {
+  background-color: #283e50;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Lobster', sans-serif;
+}
+
+.pravidla {
+  background-color: #1fcca4;
+}
+
+.zacit-hrat {
+  background-color: #0197f6;
+}
