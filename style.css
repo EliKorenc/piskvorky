@@ -1,29 +1,37 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  display: flex;
+  justify-content: center;
+}
+
+.uvodni-stranka {
   display: flex;
   flex-direction: column;
+  margin: 30vw;
+  margin-top: 10vh;
+  width: 360px;
   font-family: sans-serif;
   color: #ffffff;
   text-align: center;
-  background-image: linear-gradient(#615dad, #ffc8da);
-  margin: 30vw;
-  margin-top: 10vh;
-
+  line-height: 1.5;
 }
 
 .uvod {
   background-color: #283e50;
   padding: 10px;
+  flex: 0 1 50%;
 }
+
 
 img {
   width: 100%;
   height: auto;
-  border-top-left-radius: 2%;
-  border-top-right-radius: 2%;
+  border-radius: 10px 10px 0 0;
 }
 
 h1 {
@@ -32,8 +40,11 @@ h1 {
 
 .pravidla {
   background-color: #1fcca4;
+  flex: 0 1 50px;
 }
 
 .zacit-hrat {
   background-color: #0197f6;
+  flex: 0 1 50px;
+
 }
