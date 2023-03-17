@@ -35,6 +35,8 @@ img {
 
 h1 {
   font-family: 'Lobster', sans-serif;
+  font-size: 3rem;
+  margin: 0.5rem;
 }
 
 .uvodni-stranka a {
