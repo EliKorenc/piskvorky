@@ -168,4 +168,5 @@ button:hover {
   aspect-ratio: 1 / 1;
   background-color: #cb9ac0;
   border: 1px solid black;
+  cursor: pointer;
 }
