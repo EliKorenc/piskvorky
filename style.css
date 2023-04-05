@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 10vmin;
-  max-width: 55vmin;
+  max-width: 80vmin;
   font-family: sans-serif;
   color: #ffffff;
   text-align: center;
@@ -81,7 +81,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1vmin;
+  margin-top: 10vmin;
   max-width: 80vmin;
   font-family: sans-serif;
   color: #ffffff;
@@ -114,6 +114,7 @@ h2 {
 }
 
 .btn-player {
+  display: flex;
   font-size: 3rem;
   padding: 0px;
 }
@@ -123,6 +124,7 @@ h2 {
   flex-direction: row;
   gap: 1rem;
 }
+
 
 .game-buttons img {
   width: 5rem;
