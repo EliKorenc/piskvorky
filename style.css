@@ -173,14 +173,14 @@ button:hover {
 
 .square-circle {
   background-image: url("circle.svg");
-  background-size: 70%;
   background-position: center;
+  background-size: 70%;
   background-repeat: no-repeat;
 }
 
 .square-cross {
   background-image: url("cross.svg");
-  background-size: 70%;
   background-position: center;
+  background-size: 70%;
   background-repeat: no-repeat;
 }
