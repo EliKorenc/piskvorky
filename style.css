@@ -170,3 +170,17 @@ button:hover {
   border: 1px solid black;
   cursor: pointer;
 }
+
+.square-circle {
+  background-image: url("circle.svg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.square-cross {
+  background-image: url("cross.svg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
