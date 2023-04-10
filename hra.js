@@ -1,5 +1,6 @@
 console.log('jéje');
 
+// basic constats:
 const circle = 'circle';
 const cross = 'cross';
 
@@ -10,6 +11,8 @@ const currentPlayerElm = document.querySelector('.current-player');
 //
 
 const move = (event) => {
+  // disabled overwriting o/x:
+  event.target.disabled = true;
   // fun condition for choosing to move o/x markers into a square:
   if (currentPlayer === circle) {
     event.target.classList.add('square-circle');
