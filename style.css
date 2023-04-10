@@ -97,41 +97,40 @@ h1 {
   width: 100%;
   max-width: 80vmin;
   margin: 10px 0 10px 0;
+  gap: 1rem;
 }
 
 .player-items {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 h2 {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
 .current-player {
   display: flex;
-  font-size: 3rem;
-  min-width: 3rem;
+  min-width: 2rem;
   padding: 0px;
+  filter: invert(100%)
 }
 
 .player-circle {
   background-image: url("circle.svg");
-  color: #ffffff;
-  background-size: 90%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .player-cross {
   background-image: url("cross.svg");
-  color: #ffffff;
-  background-size: 90%;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -141,7 +140,6 @@ h2 {
   flex-direction: row;
   gap: 1rem;
 }
-
 
 .game-buttons img {
   width: 3rem;
