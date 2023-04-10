@@ -113,10 +113,27 @@ h2 {
   font-weight: bold;
 }
 
-.btn-player {
+.current-player {
   display: flex;
   font-size: 3rem;
+  min-width: 3rem;
   padding: 0px;
+}
+
+.player-circle {
+  background-image: url("circle.svg");
+  color: #ffffff;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.player-cross {
+  background-image: url("cross.svg");
+  color: #ffffff;
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .game-buttons {
