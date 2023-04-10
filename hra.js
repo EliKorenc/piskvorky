@@ -1,6 +1,13 @@
 console.log('jéje');
 
-let currentPlayer = 'circle';
+const circle = 'circle';
+const cross = 'cross';
+
+let currentPlayer = circle;
+
+const currentPlayerElm = document.querySelector('.current-player');
+
+//
 
 const circleLocation = (event) => {
   event.target.classList.add('square-circle');
