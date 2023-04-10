@@ -41,3 +41,14 @@ document.querySelector('button:nth-child(7)').addEventListener('click', move);
 document.querySelector('button:nth-child(8)').addEventListener('click', move);
 document.querySelector('button:nth-child(9)').addEventListener('click', move);
 document.querySelector('button:nth-child(10)').addEventListener('click', move);
+
+// fun restart verification for the player:
+const really = (event) => {
+  if (confirm('Opravdu cheš začít znovu?')) {
+    window.location.href = 'hra.html';
+  } else {
+    event.preventDefault();
+  }
+};
+
+document.querySelector('.btn-restart').addEventListener('click', really);
