@@ -31,16 +31,9 @@ const move = (event) => {
 };
 
 // event listener:
-document.querySelector('button:nth-child(1)').addEventListener('click', move);
-document.querySelector('button:nth-child(2)').addEventListener('click', move);
-document.querySelector('button:nth-child(3)').addEventListener('click', move);
-document.querySelector('button:nth-child(4)').addEventListener('click', move);
-document.querySelector('button:nth-child(5)').addEventListener('click', move);
-document.querySelector('button:nth-child(6)').addEventListener('click', move);
-document.querySelector('button:nth-child(7)').addEventListener('click', move);
-document.querySelector('button:nth-child(8)').addEventListener('click', move);
-document.querySelector('button:nth-child(9)').addEventListener('click', move);
-document.querySelector('button:nth-child(10)').addEventListener('click', move);
+document.querySelectorAll('.square').forEach((element) => {
+  element.addEventListener('click', move);
+});
 
 // fun restart verification for the player:
 const really = (event) => {
