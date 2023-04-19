@@ -50,15 +50,17 @@ const move = (event) => {
   // fun findWinner with alert for player:
   const vitez = findWinner(herniPole);
   if (vitez === 'o' || vitez === 'x') {
-    alert(`Vyhrál hráč se symbolem ${vitez}.`);
-    location.reload();
-  }
-  if (vitez === 'tie') {
-    alert(`Hra skončila remízou.`);
-    location.reload();
+    setTimeout(() => {
+      alert(`Vyhrál hráč se symbolem ${vitez}.`);
+      location.reload();
+    }, 250);
+  } else if (vitez === 'tie') {
+    setTimeout(() => {
+      alert(`Hra skončila remízou.`);
+      location.reload();
+    }, 250);
   }
 };
-//console.log(vitez);
 
 // event listener to all square:
 document.querySelectorAll('.square').forEach((element) => {
