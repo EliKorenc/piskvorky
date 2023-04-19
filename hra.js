@@ -51,6 +51,9 @@ const move = (event) => {
   if (vitez === 'o' || vitez === 'x') {
     alert(`Vyhrál hráč se symbolem ${vitez}.`);
   }
+  if (vitez === 'tie') {
+    alert(`Hra skončila remízou.`);
+  }
 };
 //console.log(vitez);
 
