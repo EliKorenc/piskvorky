@@ -32,33 +32,34 @@ const move = (event) => {
   currentPlayerElm.classList.toggle('player-circle');
 
   // fun to use .map to transform element of array to string for fun findWinner:
-  const pole = document.querySelectorAll('button');
-  const poleCtverecku = Array.from(pole);
-  //console.log(pole);
-  //console.log(poleCtverecku);
+  const area = document.querySelectorAll('button');
+  const fieldOfSquares = Array.from(area);
+  //console.log(area);
+  //console.log(fieldOfSquares);
 
-  const herniPole = poleCtverecku.map((ctverecek) => {
-    if (ctverecek.classList.contains('square-circle')) {
+  const gameField = fieldOfSquares.map((square) => {
+    if (square.classList.contains('square-circle')) {
       return 'o';
-    } else if (ctverecek.classList.contains('square-cross')) {
+    } else if (square.classList.contains('square-cross')) {
       return 'x';
     }
     return '_';
   });
-  //console.log(herniPole);
+  //console.log(gameField);
 
   // fun findWinner with alert for player:
-  const vitez = findWinner(herniPole);
-  if (vitez === 'o' || vitez === 'x' || vitez === 'tie') {
+  const winner = findWinner(gameField);
+  if (winner === 'o' || winner === 'x' || winner === 'tie') {
     setTimeout(() => {
-      if (vitez === 'o' || vitez === 'x') {
-        alert(`Vyhrál hráč se symbolem ${vitez}.`);
-      } else if (vitez === 'tie') {
+      if (winner === 'o' || winner === 'x') {
+        alert(`Vyhrál hráč se symbolem ${winner}.`);
+      } else if (winner === 'tie') {
         alert(`Hra skončila remízou.`);
       }
       location.reload();
     }, 250);
   }
+  //console.log(winner);
 };
 
 // event listener to all square:
