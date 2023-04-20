@@ -49,14 +49,13 @@ const move = (event) => {
 
   // fun findWinner with alert for player:
   const vitez = findWinner(herniPole);
-  if (vitez === 'o' || vitez === 'x') {
+  if (vitez === 'o' || vitez === 'x' || vitez === 'tie') {
     setTimeout(() => {
-      alert(`Vyhrál hráč se symbolem ${vitez}.`);
-      location.reload();
-    }, 250);
-  } else if (vitez === 'tie') {
-    setTimeout(() => {
-      alert(`Hra skončila remízou.`);
+      if (vitez === 'o' || vitez === 'x') {
+        alert(`Vyhrál hráč se symbolem ${vitez}.`);
+      } else if (vitez === 'tie') {
+        alert(`Hra skončila remízou.`);
+      }
       location.reload();
     }, 250);
   }
