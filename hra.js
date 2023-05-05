@@ -14,14 +14,14 @@ const currentPlayerElm = document.querySelector('.current-player');
 const move = (event) => {
   // disabled overwriting o/x:
   event.target.disabled = true;
-  // fun condition for choosing to move o/x markers into a square:
+  // func condition for choosing to move o/x markers into a square:
   if (currentPlayer === circle) {
     event.target.classList.add('square-circle');
   } else {
     event.target.classList.add('square-cross');
   }
 
-  // fun condition to change the current player icon:
+  // func condition to change the current player icon:
   if (currentPlayer === circle) {
     currentPlayer = cross;
   } else {
@@ -31,7 +31,7 @@ const move = (event) => {
   currentPlayerElm.classList.toggle('player-cross');
   currentPlayerElm.classList.toggle('player-circle');
 
-  // fun to use .map to transform element of array to string for fun findWinner:
+  // func to use .map to transform element of array to string for func findWinner:
   const area = document.querySelectorAll('button');
   const fieldOfSquares = Array.from(area);
   //console.log(area);
@@ -47,7 +47,7 @@ const move = (event) => {
   });
   //console.log(gameField);
 
-  // fun findWinner with alert for player:
+  // func findWinner with alert for player:
   const winner = findWinner(gameField);
   if (winner === 'o' || winner === 'x' || winner === 'tie') {
     setTimeout(() => {
@@ -60,6 +60,36 @@ const move = (event) => {
     }, 250);
   }
   //console.log(winner);
+
+  // func to call API & move x with AI
+  const apiMove = (event) => {
+    fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: gameField,
+        player: 'x',
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const { x, y } = data.position;
+        const field = area[x + y * 10];
+        field.click();
+        //console.log(gameField);
+      });
+  };
+
+  if (
+    (currentPlayer === cross && winner !== 'o') ||
+    (currentPlayer === cross && winner !== 'x') ||
+    (currentPlayer === cross && winner !== 'tie')
+  ) {
+    return apiMove();
+  }
+  //console.log(gameField);
 };
 
 // event listener to all square:
