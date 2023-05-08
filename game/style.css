@@ -1,0 +1,123 @@
+.content-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vmin;
+  max-width: 80vmin;
+  font-family: sans-serif;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.top-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 80vmin;
+  margin: 10px 0 10px 0;
+  gap: 1rem;
+}
+
+.player-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.current-player {
+  display: flex;
+  min-width: 2rem;
+  padding: 0px;
+  filter: invert(100%)
+}
+
+.player-circle {
+  background-image: url("./img/circle.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.player-cross {
+  background-image: url("./img/cross.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.game-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.game-buttons img {
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+}
+
+.btn-home {
+  display: flex;
+  background-color: #1fcca4;
+  border-radius: 10px;
+}
+
+.btn-home:hover {
+  background-color: #1cbb96;
+}
+
+.btn-restart {
+  display: flex;
+  background-color: #0197f6;
+  border-radius: 10px;
+}
+
+.btn-restart:hover {
+  background-color: #0090e9;
+}
+
+.area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid black;
+  max-width: 80vmin;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+.square {
+  width: calc((80vmin - 2px) /10);
+  aspect-ratio: 1 / 1;
+  flex-grow: 1;
+  background-color: #cb9ac0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.square-circle {
+  background-image: url("./img/circle.svg");
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.square-cross {
+  background-image: url("./img/cross.svg");
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
